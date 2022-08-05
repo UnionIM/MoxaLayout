@@ -71,6 +71,22 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 button {
   border: solid #161513 1px;
   color: #161513;
@@ -157,6 +173,7 @@ h1 {
 }
 
 .main {
+  position: relative;
   display: grid;
   justify-items: center;
 }
@@ -171,7 +188,7 @@ h1 {
   align-items: center;
 }
 .main .entry__text {
-  margin-right: 50px;
+  margin-right: 60px;
 }
 .main .entry__text h1 {
   display: inline-block;
@@ -198,9 +215,9 @@ h1 {
   background-color: #161513;
   color: white;
   height: 60px;
-  width: 100%;
+  width: 101%;
   transform: rotate(-5deg);
-  padding: 20px 0;
+  padding: 20px 5px 20px 25px;
   margin-top: 100px;
 }
 .main .dividing-line__list {
@@ -214,8 +231,14 @@ h1 {
 .main .dividing-line__item img {
   margin-left: 7px;
 }
+.main .background-logo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
 .main .bio {
-  margin-top: 100px;
+  margin-top: 180px;
 }
 .main .bio__flex-container {
   display: flex;
@@ -304,12 +327,19 @@ h1 {
 .main .awards__year {
   margin-left: 16px;
 }
+.main .portfolio {
+  margin-top: 120px;
+}
 .main .portfolio__title {
   margin-bottom: 60px;
 }
-.main .portfolio__item {
+.main .portfolio__item-left {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin-bottom: 96px;
+}
+.main .portfolio__item-right {
+  display: flex;
   gap: 44px;
   margin-bottom: 96px;
 }
@@ -321,7 +351,6 @@ h1 {
 }
 .main .portfolio__description {
   font-size: 45px;
-  max-width: 400px;
 }
 .main .portfolio__post {
   padding: 11px 12px;
@@ -381,6 +410,7 @@ h1 {
   justify-content: space-between;
   align-items: center;
   border: 1px solid #161513;
+  background-color: #F2F1EF;
 }
 .main .articles__info {
   margin-right: 60px;
@@ -411,7 +441,7 @@ h1 {
   justify-content: space-between;
   align-items: center;
   max-width: 1060px;
-  padding: 60px 0;
+  padding: 60px 10px;
 }
 .footer .subscribe__interaction button {
   height: 50px;
@@ -420,7 +450,7 @@ h1 {
 .footer__container {
   max-width: 1060px;
   margin: 0 auto;
-  padding-top: 70px;
+  padding: 70px 10px 0 10px;
 }
 .footer__row {
   display: flex;
@@ -436,7 +466,7 @@ h1 {
   color: white;
 }
 .footer__list li {
-  margin-right: 30px;
+  margin-left: 20px;
 }
 
 @media (max-width: 1400px) {

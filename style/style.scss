@@ -60,6 +60,7 @@ h1{
 }
 
 .main{
+  position: relative;
   display: grid;
   justify-items: center;
   &__container{
@@ -72,7 +73,7 @@ h1{
     justify-content: space-between;
     align-items: center;
     &__text{
-      margin-right: 50px;
+      margin-right: 60px;
       h1{
         display: inline-block;
       }
@@ -100,9 +101,9 @@ h1{
     background-color: $darkest-color;
     color: white;
     height: 60px;
-    width: 100%;
+    width: 101%;
     transform: rotate(-5deg);
-    padding: 20px 0;
+    padding: 20px 5px 20px 25px;
     margin-top: 100px;
     &__list{
       display: flex;
@@ -116,11 +117,14 @@ h1{
       }
     }
   }
+  .background-logo{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
   .bio{
-    margin-top: 100px;
-    &__post{
-      //width: 350px;
-    }
+    margin-top: 180px;
     &__flex-container{
       display: flex;
       justify-content: space-between;
@@ -210,12 +214,17 @@ h1{
     }
   }
   .portfolio{
+    margin-top: 120px;
     &__title{
       margin-bottom: 60px;
     }
-    &__item{
+    &__item-left{
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
+      margin-bottom: 96px;
+    }
+    &__item-right{
+      display: flex;
       gap: 44px;
       margin-bottom: 96px;
     }
@@ -227,7 +236,6 @@ h1{
     }
     &__description{
       font-size: 45px;
-      max-width: 400px;
     }
     &__post{
       padding: 11px 12px;
@@ -289,6 +297,7 @@ h1{
       justify-content: space-between;
       align-items: center;
       border: 1px solid $darkest-color;
+      background-color: $background-color;
     }
     &__info{
       margin-right: 60px;
@@ -319,7 +328,7 @@ h1{
       justify-content: space-between;
       align-items: center;
       max-width: 1060px;
-      padding: 60px 0;
+      padding: 60px 10px;
     }
     &__interaction{
       button{
@@ -331,7 +340,7 @@ h1{
   &__container{
     max-width: 1060px;
     margin: 0 auto;
-    padding-top: 70px;
+    padding: 70px 10px 0 10px;
   }
   &__row{
     display: flex;
@@ -346,7 +355,7 @@ h1{
       color: white;
     }
     li{
-      margin-right: 30px;
+      margin-left: 20px;
     }
   }
 
